@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- custom css link  -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    
+    <title>Bus Schedule</title>
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch&family=Mulish:wght@300&display=swap');
+
+
+.green { background-color: #2ecc71; }
+.turquoise { background-color: #1abc9c; }
+.navy { background-color: #34495e; }
+.blue { background-color: #3498db; }
+.purple { background-color: #9b59b6; }
+.grey { background-color: #bdc3c7; color: #202020; }
+.gray { background-color: #7f8c8d; }
+.red { background-color: #e74c3c; }
+.orange { background-color: #f39c12; }
+.yellow { background-color: #f1c40f; color: #303030; }
+
+body{
+    font-family: 'Mulish', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('./assets/images/fotor-ai-2023042733357.jpg');
+    background-image: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    font-size: 15px;
+
+}
+
+body h1{
+    font-family: 'Chakra Petch', sans-serif;
+    display: flex;
+    font-size: 60px;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    -webkit-text-stroke-color: 4px black;
+}
+
+.day-columns {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  justify-content: center;
+  .day-column {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    height: 400px;
+    min-width: 160px;
+  }
+
+
+    .day-header {
+      text-align: center;
+      padding: 5px;
+      color: rgb(255, 255, 255);
+    }
+    .day-content {
+      flex-grow: 1;
+      flex-direction: column;
+      justify-content: flex-start;
+      padding: 5px;
+      overflow-y: auto;
+    }
+
+      .event {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-bottom: 5px;
+        padding: 3px;
+        color: white;
+        padding: 5px;
+        border-radius: 7px;
+        box-shadow: 0px 1px 15px 1px rgba(81, 77, 92, 0.08);
+      }
+        .title {
+          font-size: 12px;
+        }
+
+        .footer {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-evenly;
+          font-size: 11px;
+        }
+      }
+    
+    .day-footer {
+      
+      padding: 5px;
+      text-align: center;
+      font-size: 13px;
+      color: white;
+    }
+  
+
+
+.container {
+  margin-top: 20px;
+  background-color: rgba(0, 0, 0, 0.534);
+  color: white;
+
+}
+
+    </style>
+</head>
+
+<body>
+    <h1>Bus Schedule</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="row day-columns">
+                <div class="day-column">
+                    <div class="day-header">Monday</div>
+                    <div class="day-content">
+                        <div class="event gray">
+                            <span class="title">All Stop</span>
+                            <footer>
+                                <span>4 Bus</span>
+                                <span>8:30 AM</span>
+                            </footer>
+                        </div>
+                        <div class="event orange">
+                            <span class="title">All Stop</span>
+                            <footer>
+                                <span>3 Bus</span>
+                                <span>9:30 AM</span>
+                            </footer>
+                        </div>
+                        <div class="event red">
+                            <span class="title">All Stop</span>
+                            <footer>
+                                <span>3 Bus</span>
+                                <span>10:30 AM</span>
+                            </footer>
+                        </div>
+                        <div class="event blue">
+                            <span class="title">Kharar</span>
+                            <footer>
+                                <span>4 Bus</span>
+                                <span>12:30</span>
+                            </footer>
+                        </div>
+                    </div>
+                    <div class="day-footer">14 Bus</div>
+                </div>
+                <div class="day-column">
+                    <div class="day-header">Tuesday</div>
+                    <div class="day-content">
+                        <div class="event purple">
+                            <span class="title">All Stop</span>
+                            <footer>
+                                <span>4 Bus</span>
+                                <span>8:30 AM</span>
+
+                            </footer>
+                        </div>
+
+                        <div class="event blue">
+                            <span class="title">All Stop</span>
+                            <footer>
+                                <span>5 BUS</span>
+                                <span>9:30 AM</span>
+
+                            </footer>
+                        </div>
+                    </div>
+                    <div class="day-footer">9 Tasks</div>
+                </div>
+                <div class="day-column">
+                    <div class="day-header">Wednesday</div>
+                    <div class="day-content">
+                        <div class="event yellow">
+                            <span class="title">All Stop</span>
+                            <footer>
+                                <span>5 Bus</span>
+                                <span>8:30</span>
+
+                            </footer>
+                        </div>
+                        <div class="event navy">
+                            <span class="title">All Stop</span>
+                            <footer>
+                                <span>4 Bus</span>
+                                <span>9:30</span>
+
+                            </footer>
+                        </div>
+                        <div class="event red">
+                            <span class="title">Kharar</span>
+                            <footer>
+                                <span>3 Bus</span>
+                                <span>10:30 AM</span>
+
+                            </footer>
+                        </div>
+                        <div class="event blue">
+                            <span class="title">Kharar</span>
+                            <footer>
+                                <span>3 Bus</span>
+                                <span>12:30 PM</span>
+
+                            </footer>
+                        </div>
+                    </div>
+                    <div class="day-footer">15 Bus</div>
+                </div>
+                <div class="day-column">
+                    <div class="day-header">Thursday</div>
+                    <div class="day-content">
+                        <div class="event purple">
+                            <span class="title">All stop</span>
+                            <footer>
+                                <span>5 Bus</span>
+                                <span>8:30 AM</span>
+
+                            </footer>
+                        </div>
+                        <div class="event navy">
+                            <span class="title">All stop</span>
+                            <footer>
+                                <span>2 Bus</span>
+                                <span>9:30 AM</span>
+
+                            </footer>
+                        </div>
+                        <div class="event orange">
+                            <span class="title">Kharar</span>
+                            <footer>
+                                <span>3 Bus</span>
+                                <span>11:30 AM</span>
+
+                            </footer>
+                        </div>
+                        <div class="event red">
+                            <span class="title">Allstop</span>
+                            <footer>
+                                <span>5 Bus</span>
+                                <span>12:30 PM</span>
+
+                            </footer>
+                        </div>
+                        <div class="event blue">
+                            <span class="title">Kharar</span>
+                            <footer>
+                                <span>1 Bus</span>
+                                <span>2:30 PM</span>
+
+                            </footer>
+                        </div>
+                    </div>
+                    <div class="day-footer">16 Bus</div>
+                </div>
+                <div class="day-column">
+                    <div class="day-header">Friday</div>
+                    <div class="day-content">
+                        <div class="event purple">
+                            <span class="title">All stop</span>
+                            <footer>
+                                <span>4 Bus</span>
+                                <span>8:30 AM</span>
+
+                            </footer>
+                        </div>
+                        <div class="event navy">
+                            <span class="title">All stop</span>
+                            <footer>
+                                <span>3 Bus</span>
+                                <span>9:30 AM</span>
+
+                            </footer>
+                        </div>
+                        <div class="event yellow">
+                            <span class="title">All stop</span>
+                            <footer>
+                                <span>3 Bus</span>
+                                <span>10:30 AM</span>
+
+                            </footer>
+                        </div>
+                        <div class="event navy">
+                            <span class="title"></span>
+                            <footer>
+                                <span>4 Bus</span>
+                                <span>12:30 PM</span>
+
+                            </footer>
+                        </div>
+                        <div class="event red">
+                            <span class="title">Kharar</span>
+                            <footer>
+                                <span>2 Bus</span>
+                                <span>1:30 PM</span>
+
+                            </footer>
+                        </div>
+                        <div class="event blue">
+                            <span class="title">Chandigarh University</span>
+                            <footer>
+                                <span>1 Bus</span>
+                                <span>2:30 PM</span>
+
+                            </footer>
+                        </div>
+                        <div class="event orange">
+                            <span class="title">Chandigarh University</span>
+                            <footer>
+                                <span>1 Bus</span>
+                                <span>3:30 PM</span>
+
+                            </footer>
+                        </div>
+                    </div>
+                    <div class="day-footer">16 Bus</div>
+                </div>
+                <div class="day-column">
+                    <div class="day-header">Saturday</div>
+                    <div class="day-content">
+                        <div class="event purple">
+                            <span class="title">All Stop</span>
+                            <footer>
+                                <span>4 Bus</span>
+                                <span>8:30 AM</span>
+
+                            </footer>
+                        </div>
+                        <div class="event navy">
+                            <span class="title">All Stop</span>
+                            <footer>
+                                <span>3 Bus</span>
+                                <span>10:30 AM</span>
+
+                            </footer>
+                        </div>
+                        <div class="event red">
+                            <span class="title">Chandigarh University</span>
+                            <footer>
+                                <span>4 Bus</span>
+                                <span>2:30 PM</span>
+
+                            </footer>
+                        </div>
+                        <div class="event blue">
+                            <span class="title">Chandigarh University</span>
+                            <footer>
+                                <span>3 Bus</span>
+                                <span>4:30 PM</span>
+
+                            </footer>
+                        </div>
+                    </div>
+                    <div class="day-footer">14 Bus</div>
+                </div>
+                <div class="day-column">
+                    <div class="day-header">Sunday</div>
+                    <div class="day-content">
+                        <div class="event gray">
+                            <span class="title">All stop</span>
+                            <footer>
+                                <span>4 Bus</span>
+                                <span>9:30 AM</span>
+
+                            </footer>
+                        </div>
+                        <div class="event blue">
+                            <span class="title">Chandigarh University</span>
+                            <footer>
+                                <span>4 Bus</span>
+                                <span>2:30 PM</span>
+
+                            </footer>
+                        </div>
+                    </div>
+                    <div class="day-footer">8 Bus</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script>
+        function book(route) {
+            // Implement your booking logic here
+            console.log("Booking for route: " + route);
+            // You can redirect the user to the booking page or perform any other desired action
+        }
+    </script>
+</body>
+
+</html>

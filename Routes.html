@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+
+
+<head>
+    <!-- custom css link  -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    
+    <title>Shuttle Routes</title>
+    <style>
+        
+        
+        @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch&family=Mulish:wght@600&display=swap');
+
+        body {
+            font-family: 'Mulish', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('./assets/images/fotor-ai-2023042732937_2.jpg');
+            background-image: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            color: white;
+            font-weight: 300;
+            font-family: 'Chakra Petch', sans-serif;
+            font-size: 45px;
+        }
+
+        #map-container {
+            height: 368px;
+            margin-bottom: 20px;
+        }
+
+        #route-list {
+            margin: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            word-spacing: 10px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.452);
+        }
+
+        #route-list h2 {
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        #route-list li {
+            margin-bottom: 10px;
+        }
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+    <script>
+        function initMap() {
+            // Specify the coordinates and zoom level for the map
+            var mapOptions = {
+                center: { lat: 37.7749, lng: -122.4194 }, // Example: San Francisco coordinates
+                zoom: 10
+            };
+
+            // Create the map object
+            var map = new google.maps.Map(document.getElementById('map-container'), mapOptions);
+
+            // Add markers or draw routes on the map as needed
+            // Example: Add markers for shuttle bus stops
+            var marker1 = new google.maps.Marker({
+                position: { lat: 37.7749, lng: -122.4194 },
+                map: map,
+                title: 'Bus Stop 1'
+            });
+
+            var marker2 = new google.maps.Marker({
+                position: { lat: 37.7890, lng: -122.4074 },
+                map: map,
+                title: 'Bus Stop 2'
+            });
+
+            // Example: Draw a route polyline between shuttle bus stops
+            var routeCoordinates = [
+                { lat: 37.7749, lng: -122.4194 },
+                { lat: 37.7890, lng: -122.4074 }
+            ];
+
+            var routePath = new google.maps.Polyline({
+                path: routeCoordinates,
+                geodesic: true,
+                strokeColor: '#FF0000',
+                strokeOpacity: 1.0,
+                strokeWeight: 2
+            });
+
+            routePath.setMap(map);
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Shuttle Routes</h1>
+
+    <div id="map-container"></div>
+
+    <div id="route-list">
+        <h2>Routes</h2>
+        <ul>
+            <li>Route 1: Kharar - Chandigarh University 2</li>
+            <li>Route 2: Mohali - Chandigarh University 3</li>
+            <li>Route 3: Chandigarh - Chandigarh University 3</li>
+            <li>Route 4: Panchkula - Chandigarh University 3</li>
+            <li>Route 4: ZirakPur - Chandigarh University 3</li>
+        </ul>
+    </div>
+
+    <script>
+        // Call the initMap function to initialize the map
+        initMap();
+    </script>
+</body>
+
+</html>
