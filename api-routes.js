@@ -1,13 +1,13 @@
 const express = require('express');
 const router = express.Router();
-const YourModel = require('./your-model'); // Import your Mongoose model
+const UserModel = require('./transport'); // Import your Mongoose model
 
-// Example route for handling login
 router.post('/login', async (req, res) => {
     try {
-        // Assuming YourModel has fields 'uname' and 'psw'
         const { uname, psw } = req.body;
-        const user = await YourModel.findOne({ uname, psw });
+
+        // Find the user in the database
+        const user = await UserModel.findOne({ uname, psw });
 
         if (user) {
             // Successfully logged in

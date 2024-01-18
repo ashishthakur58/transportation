@@ -215,8 +215,8 @@
     </style>
 </head>
 <body>
-    <form 
-    action="action_page.php" method="post"
+    <form id="loginForm"
+    
     action="loginsuc.html" method="post"
     >
         <div class="imgcontainer">
@@ -241,5 +241,43 @@
             <span class="psw">Forgot <a href="#">password?</a></span>
         </div>
     </form>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const loginForm = document.getElementById('loginForm');
+            const errorMessage = document.getElementById('errorMessage');
+
+            loginForm.addEventListener('submit', function (event) {
+                event.preventDefault();
+
+                const formData = new FormData(loginForm);
+                const userData = {};
+
+                formData.forEach((value, key) => {
+                    userData[key] = value;
+                });
+
+                fetch('http://localhost:3000/api/login', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(userData),
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        window.location.href = 'loginsuc.html';
+                    } else {
+                        errorMessage.textContent = data.message || 'Login failed. Please try again.';
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    errorMessage.textContent = 'An error occurred. Please try again.';
+                });
+            });
+        });
+    </script>
 </body>
 </html>
